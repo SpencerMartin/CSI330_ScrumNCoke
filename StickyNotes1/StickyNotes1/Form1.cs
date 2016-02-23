@@ -16,5 +16,33 @@ namespace StickyNotes1
         {
             InitializeComponent();
         }
+
+        private void add_button_Click(object sender, EventArgs e)
+        {
+            PictureBox pb = new PictureBox();
+
+
+
+        }
+
+        private void OnDragEnter(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void OnDragLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnDragOver(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void OnDragDrop(object sender, DragEventArgs e)
+        {
+
+        }
     }
 }
