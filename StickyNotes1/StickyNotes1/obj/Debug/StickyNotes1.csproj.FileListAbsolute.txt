@@ -1,1 +1,10 @@
 C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\bin\Debug\StickyNotes1.exe.config
+C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\bin\Debug\StickyNotes1.exe
+C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\bin\Debug\StickyNotes1.pdb
+C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\obj\Debug\StickyNotes1.csprojResolveAssemblyReference.cache
+C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\obj\Debug\StickyNotes1.Form1.resources
+C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\obj\Debug\StickyNotes1.NewNote.resources
+C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\obj\Debug\StickyNotes1.Properties.Resources.resources
+C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\obj\Debug\StickyNotes1.csproj.GenerateResource.Cache
+C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\obj\Debug\StickyNotes1.exe
+C:\Users\Spencer\Documents\Champlain\15-16 (Senior)\Software Dev\ScrumNCoke\CSI330_ScrumNCoke\StickyNotes1\StickyNotes1\obj\Debug\StickyNotes1.pdb
