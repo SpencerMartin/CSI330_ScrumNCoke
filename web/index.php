@@ -182,7 +182,8 @@
 	</style>
 	<script>
 		$(function() {
-		 $(".note").draggable();
+		 $("notes").draggable();
+		 //$(".note").draggable();
 		});
 	</script>
 </head>
