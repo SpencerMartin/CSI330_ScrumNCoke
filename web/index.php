@@ -68,7 +68,7 @@
 			var note = $( "<textarea class='note' onkeyup='notes.update( this.parentNode );'>" + content + "</textarea>" );
 			note_wrapper.append( note );
 
-			$(note).draggable();
+			$("note").draggable();
 
 			var note_delete = $( "<button class='note-delete' type='button' onclick='notes.delete( this.parentNode );'><i class='fa fa-ban'></i></button>" );
 			note_wrapper.append( note_delete );
