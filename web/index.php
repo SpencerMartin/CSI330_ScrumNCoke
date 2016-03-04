@@ -181,11 +181,13 @@
 	}
 	</style>
 	<script>
-		$(".note").draggable()
-  		.click(function() {
+		$(function() {
+		 $(".note").draggable()
+  		 .click(function() {
     		   $(this).draggable({ disabled: false });
-		}).dblclick(function() {
+		 }).dblclick(function() {
     		   $(this).draggable({ disabled: true });
+		 });
 		});
 	</script>
 </head>
