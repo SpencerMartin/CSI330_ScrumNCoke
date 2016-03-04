@@ -65,9 +65,11 @@
 			var note_wrapper = $( "<div id='note" + id + "' class='note-wrapper' data-id='" + id + "'></div>" );
 			$( "#notes" ).append( note_wrapper );
 
+			$("note" + id).draggable();
+
 			var note = $( "<textarea class='note' onkeyup='notes.update( this.parentNode );'>" + content + "</textarea>" );
 			note_wrapper.append( note );
-			note-wrapper.draggable();
+			
 
 			var note_delete = $( "<button class='note-delete' type='button' onclick='notes.delete( this.parentNode );'><i class='fa fa-ban'></i></button>" );
 			note_wrapper.append( note_delete );
