@@ -68,6 +68,8 @@
 			var note = $( "<textarea class='note' onkeyup='notes.update( this.parentNode );'>" + content + "</textarea>" );
 			note_wrapper.append( note );
 
+			note.draggable();
+
 			var note_delete = $( "<button class='note-delete' type='button' onclick='notes.delete( this.parentNode );'><i class='fa fa-ban'></i></button>" );
 			note_wrapper.append( note_delete );
 		},
@@ -180,12 +182,6 @@
 		padding:4px 6px;
 	}
 	</style>
-	<script>
-		$(function() {
-		 $("notes").draggable();
-		 //$(".note").draggable();
-		});
-	</script>
 </head>
 <body>
 	<div style='text-align:center;'>
