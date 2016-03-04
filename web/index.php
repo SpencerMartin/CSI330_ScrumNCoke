@@ -12,6 +12,7 @@
 			// Sends a GET request to api.php?action=create and get ID back, creating a new note
 			$.get( 'api.php', {
 				'action' : 'create'
+				$("notes").draggable();
 			} ).done( function whenDone( data_text ){
 				try{
 					// Convert text received from request into JavaScript object
@@ -19,7 +20,6 @@
 
 					// Create note element with ID returned from database, and empty note text
 					notes.show( data.id, "" );
-					$('notes').draggable();
 				}catch( e ){
 					console.log( 'Could not parse data for notes.create', data_text );
 					alert( 'Error parsing data. See console for details.' );
