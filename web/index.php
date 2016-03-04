@@ -191,7 +191,7 @@
 		<button type='button' id='add-note' onclick='notes.create();'><i class='fa fa-plus' style='color:green;'></i> Add note</button>
 		<button type='button' id='watch-notes' onclick='notes.watch();'><i class='fa fa-refresh'></i> Refresh</button>
 	</div>
-	<div id='notes'>
+	<div id='notes' class="ui-widget-content">
 
 	</div><!-- #notes -->
 	<script>
