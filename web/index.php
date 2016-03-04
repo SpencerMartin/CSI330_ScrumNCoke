@@ -181,6 +181,14 @@
 		padding:4px 6px;
 	}
 	</style>
+	<script>
+		$(".note").draggable()
+  		.click(function() {
+    		   $(this).draggable({ disabled: false });
+		}).dblclick(function() {
+    		   $(this).draggable({ disabled: true });
+		});
+	</script>
 </head>
 <body>
 	<div style='text-align:center;'>
