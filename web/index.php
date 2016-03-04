@@ -12,7 +12,6 @@
 			// Sends a GET request to api.php?action=create and get ID back, creating a new note
 			$.get( 'api.php', {
 				'action' : 'create'
-				$("notes").draggable();
 			} ).done( function whenDone( data_text ){
 				try{
 					// Convert text received from request into JavaScript object
