@@ -41,8 +41,6 @@
 			var note_content = $( note.children( '.note' )[0] );
 			var typeTimer;
 			var typingInterval = 5000;
-			
-			note_content.on(keyup)
 
 			// Mark the note as updating
 			note.data( 'status', 'updating' );
