@@ -75,6 +75,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Resources\GloriaHallelujah.ttf" />
+    <None Include="Resources\Required_Bins\nhibernate-configuration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Required_Bins\nhibernate-mapping.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -87,6 +93,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\note_nontransparent.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Required_Bins\Iesi.Collections.dll" />
+    <Content Include="Resources\Required_Bins\Iesi.Collections.xml" />
+    <Content Include="Resources\Required_Bins\NHibernate.dll" />
+    <Content Include="Resources\Required_Bins\NHibernate.pdb" />
+    <Content Include="Resources\Required_Bins\NHibernate.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
