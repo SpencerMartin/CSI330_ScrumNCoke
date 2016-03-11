@@ -31,7 +31,16 @@ switch( strtolower( $_GET['action'] ) ){
 case "create":
 	$query = "INSERT INTO `notes` ( `name`, `content` ) VALUES ( '', '' );";
 	break;
-case "update":
+case "updatecolumn":
+	if( isset( $_GET['id'] ) && isset( $_GET['column'] ) ){
+		$query = "UPDATE `notes` SET `column` = :column WHERE `id` = :id LIMIT 1;";
+		$parameters = array(
+			":column" => urldecode( $_GET['column'] ),
+			":id" => $_GET['id']
+		);
+	}
+	break;
+case "updatetext":
 	if( isset( $_GET['id'] ) && isset( $_GET['content'] ) ){
 		$query = "UPDATE `notes` SET `content` = :content WHERE `id` = :id LIMIT 1;";
 		$parameters = array(
