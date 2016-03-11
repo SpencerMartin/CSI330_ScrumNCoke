@@ -32,6 +32,10 @@
 			var note = $( note_element );
 			var note_id = note.data( 'id' );
 			var note_content = $( note.children( '.note' )[0] );
+			var typeTimer;
+			var typingInterval = 5000;
+			
+			note_content.on(keyup)
 
 			// Mark the note as updating
 			note.data( 'status', 'updating' );
@@ -41,9 +45,17 @@
 				'action' : 'update',
 				'id' : note_id,
 				'content' : note_content.val()
-			} ).done( function whenDone( data_text ){
+			} 
+			note_content.keyup(function(){
+				clearTimeout(typingTimer);
+				if (note_content.val) {
+					typingTimer = setTimeout(whenDone, doneTypingInterval);
+					}
+			});   )
+			
+			 function whenDone( data_text ){
 				note.data( 'status', 'updated' );
-			} );
+			} ;
 		},
 		"delete" : function( note_element ){
 			// Sends a GET request to api.php?action=delete to change database record for note
@@ -65,8 +77,11 @@
 			var note_wrapper = $( "<div id='note" + id + "' class='note-wrapper' data-id='" + id + "'></div>" );
 			$( "#notes" ).append( note_wrapper );
 
+			$("note" + id).draggable();
+
 			var note = $( "<textarea class='note' onkeyup='notes.update( this.parentNode );'>" + content + "</textarea>" );
 			note_wrapper.append( note );
+			
 
 			var note_delete = $( "<button class='note-delete' type='button' onclick='notes.delete( this.parentNode );'><i class='fa fa-ban'></i></button>" );
 			note_wrapper.append( note_delete );
@@ -186,7 +201,7 @@
 		<button type='button' id='add-note' onclick='notes.create();'><i class='fa fa-plus' style='color:green;'></i> Add note</button>
 		<button type='button' id='watch-notes' onclick='notes.watch();'><i class='fa fa-refresh'></i> Refresh</button>
 	</div>
-	<div id='notes'>
+	<div id='notes' class="ui-widget-content">
 
 	</div><!-- #notes -->
 	<script>
