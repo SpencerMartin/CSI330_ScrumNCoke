@@ -54,7 +54,7 @@
 				'content' : note_content.val()
 			}.done (function whenDone( data_text ){
 				note.data( 'status', 'updated' );
-			} );
+			} ));
 		},
 		"delete" : function( note_element ){
 			// Sends a GET request to api.php?action=delete to change database record for note
