@@ -6,8 +6,16 @@
 	<script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
 	<script src='https://code.jquery.com/ui/1.11.4/jquery-ui.min.js'></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<script>
-	var notes = {
+	
+  <style>
+  #Todo, #InProgress, #NeedsTesting, #Done { float: left; width: 20%;}
+  #Todo li, #InProgress li, #NeedsTesting li, #Done li {width: 20%; }
+  </style>
+  <script>
+	
+	
+	var note = {
+		$class = "droptrue";
 		"create" : function(){
 			// Sends a GET request to api.php?action=create and get ID back, creating a new note
 			$.get( 'api.php', {
@@ -77,11 +85,8 @@
 			var note_wrapper = $( "<div id='note" + id + "' class='note-wrapper' data-id='" + id + "'></div>" );
 			$( "#notes" ).append( note_wrapper );
 
-			$("note" + id).draggable();
-
 			var note = $( "<textarea class='note' onkeyup='notes.update( this.parentNode );'>" + content + "</textarea>" );
 			note_wrapper.append( note );
-			
 
 			var note_delete = $( "<button class='note-delete' type='button' onclick='notes.delete( this.parentNode );'><i class='fa fa-ban'></i></button>" );
 			note_wrapper.append( note_delete );
@@ -148,6 +153,7 @@
 		position:relative;
 		z-index:1;
 	}
+	
 	.note{
 		box-sizing:border-box;
 		background-color:#F9EFAF;
@@ -176,6 +182,19 @@
 		resize:both;
 		z-index:1;
 	}
+	.category{
+		font-size:20px;
+		font-family:'Gloria Hallelujah', cursive, Lucida Handwriting, Lucida, Cambria, serif;
+		text-align: center;
+		padding:30px 20px 15px 20px;
+		min-height:120px;
+		min-width:200px;
+		background-position:top;
+		background:url( headernote.png ) no-repeat;
+		background-size:contain;
+		background-position:center center, center;
+		overflow:hidden;
+	}
 	.note-delete{
 		display:none;
 		position:absolute;
@@ -195,6 +214,13 @@
 		padding:4px 6px;
 	}
 	</style>
+	<script>
+		$(function() {
+			$( "ul.droptrue" ).sortable({connectWith: "ul",
+			items: "li:not(.category)"
+			});
+		});
+	</script>
 </head>
 <body>
 	<div style='text-align:center;'>
@@ -202,7 +228,18 @@
 		<button type='button' id='watch-notes' onclick='notes.watch();'><i class='fa fa-refresh'></i> Refresh</button>
 	</div>
 	<div id='notes' class="ui-widget-content">
-
+		<ul id="Todo" class="droptrue">
+			<li class="category">To Do</li>
+		</ul>
+		<ul id="InProgress" class="droptrue">
+			<li class="category">In Progress</li>
+		</ul>
+		<ul id="NeedsTesting" class="droptrue">
+			<li class="category">Needs Testing</li>
+		</ul>
+		<ul id="Done" class="droptrue">
+			<li class="category">Done</li>
+		</ul>
 	</div><!-- #notes -->
 	<script>
 	setInterval( notes.watch, 1500 );
