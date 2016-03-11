@@ -32,6 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Joseph\Documents\Important\College\2015-2016\CSI-330 Software Development Methodologies\CSI330_ScrumNCoke\StickyNotes\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Joseph\Documents\Important\College\2015-2016\CSI-330 Software Development Methodologies\CSI330_ScrumNCoke\StickyNotes\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +61,8 @@
     <Compile Include="BoardWnd.Designer.cs">
       <DependentUpon>BoardWnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="Domain\INoteRepository.cs" />
     <Compile Include="Domain\Note.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,15 +109,17 @@
     <None Include="Resources\note_nontransparent.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Mappings\Note.hbm.xml" />
     <Content Include="Resources\Required_Bins\Iesi.Collections.dll" />
     <Content Include="Resources\Required_Bins\Iesi.Collections.xml" />
     <Content Include="Resources\Required_Bins\NHibernate.dll" />
     <Content Include="Resources\Required_Bins\NHibernate.pdb" />
     <Content Include="Resources\Required_Bins\NHibernate.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mappings\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

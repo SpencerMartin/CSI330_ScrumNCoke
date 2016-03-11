@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="StickyNotes"
+                   namespace="StickyNotes.Domain">
+
+  <class name="Note" table="notes" lazy="true">
+	<id name="id">
+	  <generator class="int" />
+	</id>
+	<property name="name" />
+	<property name="content" />
+	<property name="board" />
+	<property name="created" />
+	<property name="status_code" />
+	<property name="creator" />
+	<property name="coord_x" />
+	<property name="coord_y" />
+	<property name="width" />
+	<property name="height" />
+  </class>
+
+</hibernate-mapping>

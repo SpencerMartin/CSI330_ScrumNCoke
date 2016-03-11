@@ -12,6 +12,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using NHibernate;
+using StickyNotes.Domain;
 
 namespace StickyNotes {
 	public partial class BoardWnd : Form {
@@ -75,6 +77,17 @@ namespace StickyNotes {
 
 		protected void StickyMouseUp( object sender, MouseEventArgs e ) {
 			_Offset = Point.Empty;
+		}
+
+		private void button1_Click( object sender, EventArgs e ) {
+			using( ISession session = Data.OpenSession() )
+			using( ITransaction transaction = session.BeginTransaction() ) {
+				Note note = session.Get<Note>(1);
+
+				transaction.Commit();
+
+				MessageBox.Show( note.content );
+			}
 		}
 	}
 }
