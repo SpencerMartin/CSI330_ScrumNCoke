@@ -14,7 +14,7 @@
   <script>
 	
 	
-	var note = {
+	var notes = {
 		$class = "droptrue";
 		"create" : function(){
 			// Sends a GET request to api.php?action=create and get ID back, creating a new note
