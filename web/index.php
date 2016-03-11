@@ -53,17 +53,9 @@
 				'action' : 'update',
 				'id' : note_id,
 				'content' : note_content.val()
-			} 
-			note_content.keyup(function(){
-				clearTimeout(typingTimer);
-				if (note_content.val) {
-					typingTimer = setTimeout(whenDone, doneTypingInterval);
-					}
-			});   )
-			
-			 function whenDone( data_text ){
+			}.done (function whenDone( data_text ){
 				note.data( 'status', 'updated' );
-			} ;
+			} );
 		},
 		"delete" : function( note_element ){
 			// Sends a GET request to api.php?action=delete to change database record for note
