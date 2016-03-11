@@ -41,7 +41,7 @@ namespace StickyNotes {
 			Label label2 = new System.Windows.Forms.Label();
 			label2.BackColor = System.Drawing.Color.Transparent;
 			label2.Font = Gloria;
-			label2.Image = global::StickyNotes.Properties.Resources.note;
+			label2.Image = global::StickyNotes.Properties.Resources.note_nontransparent;
 			label2.Location = new System.Drawing.Point( 137, 236 );
 			label2.Name = "label2";
 			label2.Padding = new System.Windows.Forms.Padding( 20, 40, 20, 40 );

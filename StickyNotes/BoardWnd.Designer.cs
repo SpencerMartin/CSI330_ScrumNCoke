@@ -30,13 +30,13 @@
 			// 
 			// label1
 			// 
-			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.BackColor = System.Drawing.Color.White;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Image = global::StickyNotes.Properties.Resources.note;
-			this.label1.Location = new System.Drawing.Point(931, 39);
+			this.label1.Image = global::StickyNotes.Properties.Resources.note_nontransparent;
+			this.label1.Location = new System.Drawing.Point(263, 122);
 			this.label1.Name = "label1";
 			this.label1.Padding = new System.Windows.Forms.Padding(20, 40, 20, 40);
-			this.label1.Size = new System.Drawing.Size(250, 250);
+			this.label1.Size = new System.Drawing.Size(195, 194);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "This is a test sticky note";
 			this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StickyMouseDown);
