@@ -50,6 +50,7 @@
     <Compile Include="BoardWnd.Designer.cs">
       <DependentUpon>BoardWnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Domain\Note.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BoardWnd.resx">
@@ -100,6 +101,9 @@
     <Content Include="Resources\Required_Bins\NHibernate.dll" />
     <Content Include="Resources\Required_Bins\NHibernate.pdb" />
     <Content Include="Resources\Required_Bins\NHibernate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mappings\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
